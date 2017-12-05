@@ -1,0 +1,1339 @@
+/*===WP_STANDARDS===*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+
+
+/*************************
+THEME SPECIFICS
+**************************/
+
+body{
+font-family: 'Orbitron', sans-serif;
+padding: 0em;
+background-color:#111517;
+ width: auto !important;
+  overflow-x: hidden !important;
+}
+
+/*************************
+Navbar
+**************************/
+.site-header{
+	padding: 0px;
+	margin: 0px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left: 0;
+  background-color: #111517;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+	color: white;
+	text-decoration: none;
+}
+.menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s
+}
+.menu{
+  list-style-type: none;
+	display: block;
+}
+.menu > li > a:hover
+{
+  color:#EF0D33;
+	font-size: 30px;
+	background: transparent;
+}
+#main {
+  transition: margin-left .8s;
+  color:grey;
+	font-size: 3em;
+	cursor:pointer;
+	padding-left: 15px;
+	padding-top: 15px;
+	position: fixed;
+	z-index: 1;
+}
+#main : active{
+	z-index:-1;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+@media screen and (max-width: 767px) {
+	.nav > li > a{
+		display: block;
+		font-size: 30px;
+		color: white;
+	}
+	.navbar-collapse.collapse {display: block !important;}
+}
+
+
+/*************************
+<!--Navbar --End-->
+**************************/
+
+
+/*************************
+Home Page
+**************************/
+.home{
+	height: 100vh;
+	min-height: 100%;
+	background: #111517;
+}
+.title{
+  color: #FFFFFF;
+  margin: 1em auto;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	padding: 0 20px;
+	width: 100%;
+	text-align: center;
+}
+.title h1{font-size: 4em;}
+.title h3 {font-size: 3em;}
+canvas {display:block;}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@media screen and (max-height: 312px) {
+	.title h1{font-size: 3em;	}
+	.title h3 {font-size: 2em;}
+}
+@media screen and (max-width: 466px) {
+	.title h1{font-size: 3em;}
+	.title h3 {font-size: 2em;}
+}
+ @media screen and (max-width: 354px) {
+ 	.title h1{font-size: 2em;}
+ 	.title h3 {font-size: 1em;}
+}
+
+/*--Bounce arrow--*/
+
+.fa-angle-double-down {
+ width: 37.5px;
+ display: block;
+ text-align: center;
+ color:#fff;
+ font:normal 25px 'FontAwesome';
+ line-height:40px;
+ text-rendering: auto;
+ -webkit-font-smoothing: antialiased;
+}
+.fa-angle-double-down:before {content: "\f103";}
+
+.bounce {
+ position: absolute;
+ bottom: 30px;
+ left: 50% ;
+ width: 40px;
+ height: 40px ;
+ margin-left:-30px;
+ border: 2px solid #fff;
+ -webkit-border-radius:50%;
+ -moz-border-radius:50%;
+ -ms-border-radius:50%;
+ border-radius:50%;
+ animation: bounce 2s infinite;
+ -webkit-animation: bounce 2s infinite;
+ -moz-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+ 40% {-webkit-transform: translateY(-30px);}
+ 60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-30px);}
+ 60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateY(-30px);}
+ 60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateY(-30px);}
+ 60% {transform: translateY(-15px);}
+}
+
+.bounce a{
+	text-decoration: none;
+}
+ /*************************
+ <!--Home Page--End-->
+ **************************/
+
+
+
+ /*************************
+ <!--Latest-->
+ **************************/
+#latest{
+ 	width: 100%;
+ 	text-align: center;
+ 	color: #111517;
+	background-color: #fff;
+ 	padding-bottom: 2.5em;
+	padding-top: 2.5em;
+}
+#latest h1{
+ 	border-bottom: 1px solid #111517;
+ 	position: relative;
+ 	box-shadow: 0px 1px 0 0 #111517;
+ 	text-shadow: 0px 1px 0px #111517;
+ 	padding-bottom:0.2em;
+ 	display: inline-block;
+ }
+#latest h1:after {
+ 	display: block;
+ 	content: "";
+ 	position: absolute;
+ 	width: 15px;
+ 	height: 15px;
+ 	border-right: 1px solid #111517;
+ 	border-bottom: 1px solid #111517;
+ 	background-color: #fff;
+	left: 50%;
+ 	bottom: -8px;
+ 	-webkit-transform: rotate(45deg);
+ 	-moz-transform: rotate(45deg);
+ 	-ms-transform: rotate(45deg);
+ 	-o-transform: rotate(45deg);
+ 	transform: rotate(45deg);
+ 	box-shadow: 1px 1px 0 0 #111517;
+}
+@media screen and (max-width: 466px) {
+ #latest h1{font-size: 2em;}
+ }
+@media screen and (max-width: 766px) {
+ .hovereffect img {padding-bottom: .5em;}
+ }
+
+
+.see-more{
+	margin-top: 1.5em;
+ 	background-color: #EF0D33;
+	color: #fff;
+ 	box-sizing: border-box;
+ 	display: inline-block;
+ 	border: 2px solid #EF0D33;
+ 	border-radius: 0;
+	font-size: 20px;
+ }
+.see-more:hover{
+ 	color: #111517;
+	background-color: #EF0D33;
+	border: 2px solid #EF0D33;
+ }
+
+ .see-more:focus,
+ .see-more-active{
+  	color: #111517;
+ 	background-color: #EF0D33;
+ 	border: 2px solid #EF0D33;
+  }
+
+
+
+
+.hovereffect {
+ 	width: 100%;
+ 	height: 100%;
+ 	float: left;
+ 	overflow: hidden;
+ 	position: relative;
+ 	text-align: center;
+ 	cursor: default;
+ 	display: inline-block;
+ }
+.hovereffect .overlay {
+ 	position: absolute;
+ 	overflow: hidden;
+ 	width: 80%;
+ 	height: 80%;
+ 	left: 10%;
+ 	top: 10%;
+ 	border-bottom: 1px solid #FFF;
+ 	border-top: 1px solid #FFF;
+ 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+ 	transition: opacity 0.35s, transform 0.35s;
+ 	-webkit-transform: scale(0,1);
+ 	-ms-transform: scale(0,1);
+ 	transform: scale(0,1);
+ }
+.hovereffect:hover .overlay {
+ 	opacity: 0.8;
+ 	filter: alpha(opacity=100);
+ 	-webkit-transform: scale(1);
+ 	-ms-transform: scale(1);
+ 	transform: scale(1);
+ }
+.hovereffect img {
+	padding-top: 1.5em;
+ 	display: block;
+ 	position: relative;
+ 	-webkit-transition: all 0.35s;
+ 	transition: all 0.35s;
+ 	width:  25vw ;
+ 	height: 20em ;
+ }
+.hovereffect:hover img {
+ 	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+ 	filter: brightness(0.6);
+ 	-webkit-filter: brightness(0.6);
+ }
+.hovereffect h2 {
+ 	text-transform: uppercase;
+ 	text-align: center;
+ 	position: relative;
+ 	font-size: 1em;
+ 	background-color: transparent;
+ 	color: #F4F4F4;
+ 	padding: 1em 0;
+ 	opacity: 0;
+ 	filter: alpha(opacity=0);
+ 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+ 	transition: opacity 0.35s, transform 0.35s;
+ 	-webkit-transform: translate3d(0,-100%,0);
+ 	transform: translate3d(0,-100%,0);
+ }
+.hovereffect a{
+ 	color: #F4F4F4;
+ 	padding: 1em 0;
+ 	opacity: 0;
+ 	filter: alpha(opacity=0);
+ 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+ 	transition: opacity 0.35s, transform 0.35s;
+ 	-webkit-transform: translate3d(0,100%,0);
+ 	transform: translate3d(0,100%,0);
+ }
+.hovereffect p {
+ 	color: #F4F4F4;
+ 	opacity: 0;
+ 	filter: alpha(opacity=0);
+ 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+ 	transition: opacity 0.35s, transform 0.35s;
+ 	-webkit-transform: translate3d(0,100%,0);
+ 	transform: translate3d(0,100%,0);
+ }
+.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+ 	opacity: 1;
+ 	filter: alpha(opacity=100);
+ 	-webkit-transform: translate3d(0,0,0);
+ 	transform: translate3d(0,0,0);
+ }
+@media screen and (max-width: 382px) {
+ .hovereffect img {
+  width: 15em;
+  height:15em;
+ 	padding-bottom: .5em;
+ }
+}
+
+ /*************************
+ <!--Latest--End-->
+ **************************/
+
+ /*************************
+ <!--What i do-->
+ **************************/
+#do{
+ 	width: 100%;
+ 	text-align: center;
+ 	color: #111517;
+	background-color: #F5F0F0;
+        height:auto;
+ 	padding-bottom: 2.5em;
+ }
+#do h1{
+ 	border-bottom: 1px solid #111517;
+ 	position: relative;
+ 	box-shadow: 0px 1px 0 0 #111517;
+ 	text-shadow: 0px 1px 0px #111517;
+ 	padding-bottom:0.2em;
+ 	display: inline-block;
+ }
+#do h1:after {
+ 	display: block;
+ 	content: "";
+ 	position: absolute;
+ 	width: 15px;
+ 	height: 15px;
+ 	border-right: 1px solid #111517;
+ 	border-bottom: 1px solid #111517;
+ 	background-color: #F5F5F5; 	left: 50%;
+ 	bottom: -8px;
+ 	-webkit-transform: rotate(45deg);
+ 	-moz-transform: rotate(45deg);
+ 	-ms-transform: rotate(45deg);
+ 	-o-transform: rotate(45deg);
+ 	transform: rotate(45deg);
+ 	box-shadow: 1px 1px 0 0 #111517;
+ }
+.stuff{
+ 	padding-top: 2em;
+ 	text-align: center;
+ }
+.circle {
+ 	width: 120px;
+ 	height: 120px;
+ 	-moz-border-radius: 70px;
+ 	-webkit-border-radius:70px;
+ 	border-radius: 70px;
+ 	border: 1px solid #111517;
+ 	background: transparent;
+ 	display: table-cell;
+ 	margin-bottom: 5em;
+ 	text-align:  center;;
+ }
+.circle i{
+ 	color: #111517;
+ 	display: table-cell;
+ 	vertical-align: middle;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	height: 120px;
+ 	width: 120px;
+ }
+.circle:hover{
+ 	border: 1px solid #141414;
+ 	background: #111517;
+ }
+.circle i:hover{
+ 	color: #EF0D33;
+ 	cursor: pointer;
+ }
+.text-center{
+ 	padding-bottom:1em;
+ 	display:inline-block;
+ }
+.desc h3{
+	font-size: 1.5em;
+ 	text-align: center;
+ }
+a, a:link, a:visited, a:hover, a:active, a:visited:hover {
+    /* :visited:hover is an old IE bug, not sure if it's still relevant */
+    text-decoration:none !important;
+}
+
+/*************************
+ <!--What i do--End-->
+**************************/
+
+/*************************
+  <!--about-->
+**************************/
+#about{
+	width: 100%;
+	text-align: center;
+	color: #FFFFFB;
+	background-color: #EF0D33;
+        height:auto;
+	padding-bottom: 2.5em;
+}
+
+#about h1{
+	border-bottom: 1px solid #FFFFFB;
+	position: relative;
+	box-shadow: 0px 1px 0 0 #FFFFFB;
+	text-shadow: 0px 1px 0px #FFFFFB;
+	padding-bottom:0.2em;
+	display: inline-block;
+}
+#about h1:after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-right: 1px solid #FFFFFB;
+	border-bottom: 1px solid #FFFFFB;
+	background-color: #EF0D33;
+	left: 50%;
+	bottom: -8px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow: 1px 1px 0 0 #FFFFFB;
+}
+#quote{
+	width: 100%;
+	height: auto;
+	background-color: #111517;
+}
+blockquote{
+	padding-top: .5em;
+	color: #FFFFFB;
+	border-color: transparent!important;
+}
+blockquote p{
+	font-size: 2em;
+}
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 2em;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: 25px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+
+}
+.know-more{
+	background-color: #111517;
+	color: #FFFFFB;
+	box-sizing: border-box;
+	display: inline-block;
+	border: 2px solid #111517;
+	border-radius: 0;
+	font-size: 20px;
+
+}
+.know-more:hover,
+.know-more:focus,
+.know-more:active{
+	background-color: #111517;
+	color: #EF0D33;
+	border: 2px solid #111517;
+}
+@media screen and (max-width: 466px) {
+	blockquote p,
+	#about-blockquote p {font-size: 1.8em;}
+	#about h1{font-size: 2em;}
+}
+@media screen and (max-width: 354px) {
+	blockquote p,
+	#about-blockquote p{font-size: 1.6em;}
+}
+
+
+/*************************
+ <!--about--End-->
+**************************/
+
+/*************************
+ <!--Footer-->
+**************************/
+.footer{
+	background-color: #111517;
+	text-align: center;
+	height:120px;
+	bottom: 0px;
+}
+.footer i{
+	text-align: center;
+	text-decoration: none;
+	height: 120px;
+	width: 120px;
+  display: table-cell;
+	vertical-align: middle;
+	color: #FFFFFB;
+}
+.footer i:hover{
+	color:#EF0D33;
+
+}
+
+
+
+/*************************
+	  <!--Footer--End-->
+**************************/
+
+/*************************
+<!--ABOUT PAGE-->
+**************************/
+
+
+/*************************
+<!--about-me-->
+**************************/
+
+.quote{
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: #FFFFFB;
+	padding-bottom: 2.5em;
+	display: inline-block;
+	background-blend-mode: difference;
+	background-image: url(../img/home-36.jpg);
+	background-repeat: no-repeat;
+	text-align:  right;
+	background-color:#111517;
+	background-position: right;
+
+	background-size: auto 100vh;
+	z-index: -1;
+
+}
+
+
+.quote h1{
+ position: relative;
+ /*box-shadow: 0px 1px 0 0 #FFFFFB;
+ text-shadow: 0px 1px 0px #FFFFFB;*/
+ padding-bottom:0.2em;
+ display: inline-block;
+ padding-top: 1.5em;
+ text-align: left;
+ float: left;
+ text-transform: capitalize;
+
+}
+
+
+.quote h1:before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #EF0D33;
+}
+
+/*
+.quote h1:after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-right: 1px solid #FFFFFB;
+	border-bottom: 1px solid #FFFFFB;
+	background-color: #111517;
+	left: 50%;
+	bottom: -8px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow: 1px 1px 0 0 #FFFFFB;
+}
+*/
+#about-blockquote{
+	color: #EF0D33;
+	border-color: transparent!important;
+	padding-top: 15%;
+
+}
+#about-blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  top:15%;
+}
+
+#about-blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+	color: #EF0D33;
+
+}
+.about-quote{
+	float: left;
+	text-align: left;
+	font-size: 30px;
+}
+.about-about-me{
+	font-size: 30px;
+	text-align: justify;
+	 -moz-text-align-last: left; /* Code for Firefox */
+	 text-align-last: left;
+}
+
+.about-me{
+	background-color: #fff;
+	color:#111517;
+}
+
+
+.about-me h1{
+ position: relative;
+ /*box-shadow: 0px 1px 0 0 #FFFFFB;
+ text-shadow: 0px 1px 0px #FFFFFB;*/
+ padding-bottom:0.2em;
+ display: inline-block;
+ padding-top: .5em;
+ text-align: left;
+ float: left;
+ text-transform: capitalize;
+
+}
+
+
+.about-me  h1:before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #EF0D33;
+}
+
+/*@media screen and (max-width: 1222px) {
+	blockquote {font-size: 1.5em;}
+}*/
+
+@media screen and (max-width: 992px) {
+	/*blockquote {font-size: 1em;}*/
+	.quote{	background-position: right;
+}
+}
+@media screen and (max-width: 466px) {
+	#about-blockquote::before{
+		top: 5%;
+	}
+
+
+}
+
+@media screen and (max-width: 350px;) {
+	#about-blockquote::before{
+		top: 1%;
+	}
+
+}
+
+
+.methodology{
+	background: #f5f0f0;
+	color:#111517;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.methodology h1{
+position: relative;
+/*box-shadow: 0px 1px 0 0 #FFFFFB;
+text-shadow: 0px 1px 0px #FFFFFB;*/
+padding-bottom:0.2em;
+display: inline-block;
+padding-top: .5em;
+text-align: left;
+float: left;
+text-transform: capitalize;
+}
+
+.methodology h1:before{
+ content: "";
+position: absolute;
+width: 30%;
+height: 1px;
+bottom: 0;
+left: 0;
+border-bottom: 1px solid #EF0D33;
+
+}
+
+.sth{
+	background-color:#EF0D33;
+	color:#F5F5F5;
+}
+.sth p{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/*************************
+<!--about-me-end-->
+**************************/
+
+
+/*************************
+<!--portfolio-page-->
+**************************/
+
+.portfolio{
+	width: 100%;
+	text-align: center;
+	color: #FFFFFB;
+	background:#111517;
+	height: auto;
+	padding-bottom: 2.5em;
+	display: inline-block;
+}
+.portfolio  h1{
+ position: relative;
+ /*box-shadow: 0px 1px 0 0 #FFFFFB;
+ text-shadow: 0px 1px 0px #FFFFFB;*/
+ padding-bottom:0.2em;
+ display: inline-block;
+ padding-top: 1.5em;
+ text-align: left;
+ float: left;
+ text-transform: capitalize;
+
+}
+
+
+.portfolio h1:before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #EF0D33;
+
+}
+/*
+#ms-container {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden;
+	position: relative;
+}
+*/
+.ms-item {
+	width: 100%;
+	max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+	cursor: pointer;
+}
+.image_gallery{
+ width: 100%;
+ max-width: 100%;
+ height:350px;
+ -moz-transition: all 0.3s;
+ -webkit-transition: all 0.3s;
+ transition: all 0.3s;
+ cursor: pointer;
+}
+
+/*
+.image_gallery:hover {
+	-webkit-transition: -webkit-transform 1.8s ease-in-out;
+	 -moz-transition: transform 1.8s ease-in-out;
+	 -o-transition: transform 1.8s ease-in-out;
+	 transition: transform 1.8s ease-in-out;
+	 -webkit-transform: scale(1.3);
+	 -moz-transform:  scale(1.3);
+	 -ms-transform: scale(1.3);
+	 -o-transform: scale(1.3);
+	 transform:  scale(1.3);
+	 display: block;
+	 overflow: hidden;
+}
+*/
+
+.but{
+	padding-top: 25px;
+	padding-bottom: 25px;
+
+}
+
+.but ul{
+	list-style-type: none;
+	display: inline-block;
+}
+.but ul>li>button{
+	padding: 2px;!important;
+	margin: 2px!important;
+	background-color: transparent;
+	border: 0 solid transparent;
+	line-height: 25px;
+	border-radius: 0px;
+	border-bottom: 1px solid transparent !important;
+
+}
+
+.but ul>li>button:hover,
+.but ul>li>button:active,
+.but ul>li>button:focus,
+.but ul>li>button:active:focus{
+background-color: transparent !important;
+border-bottom:  1px solid #EF0D33 !important;
+}
+
+.details h4 p{
+	color:#EF0D33;
+}
+.details a{
+	color: #FFFFFB;
+}
+.details a:hover,
+.details a:active,
+.details a:focus{
+	color:#EF0D33;
+}
+
+/*************************
+<!--services-page-->
+**************************/
+.services{
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	color:#111517;
+	height: auto;
+	padding-bottom: 2.5em;
+	}
+
+
+	.services h1{
+	 position: relative;
+	 /*box-shadow: 0px 1px 0 0 #FFFFFB;
+	 text-shadow: 0px 1px 0px #FFFFFB;*/
+	 padding-bottom:0.2em;
+	 display: inline-block;
+	 padding-top: 1.5em;
+	 text-align: left;
+	 float: left;
+	 text-transform: capitalize;
+
+	}
+
+
+	.services h1:before{
+	    content: "";
+	    position: absolute;
+	    width: 30%;
+	    height: 1px;
+	    bottom: 0;
+	    left: 0;
+	    border-bottom: 1px solid #EF0D33;
+
+	}
+
+
+	/*************************
+	<!--contact-page-->
+	**************************/
+
+.contact{
+	padding-bottom: 5em;
+}
+
+
+	.contact h1{
+		 position: relative;
+  /*box-shadow: 0px 1px 0 0 #FFFFFB;
+  text-shadow: 0px 1px 0px #FFFFFB;*/
+  padding-bottom:0.2em;
+  display: inline-block;
+  padding-top: 1.5em;
+  text-align: left;
+  float: left;
+	color: #FFFFFB;
+  text-transform: capitalize;
+
+ }
+
+
+ .contact h1:before{
+     content: "";
+     position: absolute;
+     width: 30%;
+     height: 1px;
+     bottom: 0;
+     left: 0;
+     border-bottom: 1px solid #EF0D33;
+ }
+
+
+  .btn-con{
+		background-color: #EF0D33;
+		border: 0px solid #EF0D33;
+		float: left;
+		width: 100%;
+	}
+
+	.btn-con:hover {
+		background-color: #EF0D33;
+		border: 0px solid #EF0D33;
+		color: #111517;
+	}
+
+
+
+	.btn-con:focus,
+	.btn-con:active {
+		background-color: #111517 !important;
+		border: 0px solid #111517 !important;
+		color: #EF0D33 !important;
+		outline-color: #EF0D33 !important;
+	}
+
+	.form-control{
+		background: #111517;
+		color: #f5f0f0;
+	}
+	.wpcf7 textarea{
+		border-color: #fff !important;
+		outline: 0 none !important;
+
+	}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+.wpcf7 textarea:focus
+ {
+  border-color: #EF0D33 !important;
+  box-shadow: 0 1px 1px #EF0D33 inset, 0 0 8px #EF0D33 !important;
+  outline: 0 none !important;
+	outline-color: #EF0D33 !important;
+}
+
+a,i{
+	text-decoration: none;
+}
